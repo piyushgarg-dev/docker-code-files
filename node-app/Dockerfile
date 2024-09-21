@@ -11,6 +11,7 @@ COPY index.js index.js
 
 COPY Dockerfile Dockerfile
 
-EXPOSE 8000-8009
+ENV PORT=8000
+EXPOSE 8000
 
 CMD [ "npm", "start" ]

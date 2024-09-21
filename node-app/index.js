@@ -11,9 +11,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
+app.get("/health", (req, res) => res.json({ message: "I am healthy" }));
 
-/**
- * Node v18.20.2
- * NPM installed v10.5.0
- */
+app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));

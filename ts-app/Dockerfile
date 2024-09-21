@@ -26,7 +26,7 @@ COPY --from=builder /home/build/package*.json .
 RUN npm install --omit=dev
 
 RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system -uid 1001 nodejs
+RUN adduser --system --uid 1001 nodejs
 
 USER nodejs
 
